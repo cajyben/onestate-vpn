@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get connected</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --plum: #241332;
+    --plum-2: #33204a;
+    --ink: #f3eef8;
+    --muted: #b9a9cc;
+    --saffron: #ffb020;
+    --mint: #7fd1b9;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--plum);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 "IBM Plex Sans", system-ui, sans-serif;
+    padding: clamp(1.5rem, 5vw, 4rem) 1.25rem 4rem;
+  }
+  main { max-width: 38rem; margin: 0 auto; }
+  h1, h2 { font-family: "Chakra Petch", "Arial Narrow", sans-serif; line-height: 1.1; }
+  h1 {
+    font-size: clamp(2.6rem, 10vw, 4.2rem);
+    color: var(--saffron);
+    letter-spacing: -0.01em;
+  }
+  .lede { color: var(--muted); margin: 1rem 0 2.75rem; max-width: 32rem; }
+  ol { list-style: none; padding: 0; counter-reset: step; }
+  li {
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 2.25rem 3.75rem;
+    border-left: 2px solid var(--plum-2);
+    margin-left: 1.25rem;
+  }
+  li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  li::before {
+    content: counter(step);
+    position: absolute; left: -1.3rem; top: -0.15rem;
+    width: 2.5rem; height: 2.5rem;
+    display: grid; place-items: center;
+    background: var(--plum);
+    border: 2px solid var(--saffron);
+    border-radius: 50%;
+    font: 700 1.1rem "Chakra Petch", sans-serif;
+    color: var(--saffron);
+  }
+  h2 { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  li p { color: var(--muted); }
+  .stores { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.9rem; }
+  .stores a {
+    color: var(--plum); background: var(--mint);
+    text-decoration: none; font-weight: 500;
+    padding: 0.55rem 1rem; border-radius: 0.4rem;
+  }
+  .stores a:focus-visible, a:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+  .warn {
+    margin-top: 3rem; padding: 1.1rem 1.25rem;
+    border-left: 4px solid var(--saffron);
+    background: var(--plum-2);
+    color: var(--muted); font-size: 0.95rem;
+  }
+  .warn strong { color: var(--ink); }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Let's get you in the game</h1>
+  <p class="lede">Takes about two minutes. You'll install one free app, scan a code I send you, and flip a switch before you play.</p>
+
+  <ol>
+    <li>
+      <h2>Install WireGuard</h2>
+      <p>It's the free, official app. Don't use any other VPN app for this.</p>
+      <div class="stores">
+        <a href="https://play.google.com/store/apps/details?id=com.wireguard.android" target="_blank" rel="noopener">Get it on Android</a>
+        <a href="https://apps.apple.com/app/wireguard/id1441195209" target="_blank" rel="noopener">Get it on iPhone</a>
+      </div>
+    </li>
+    <li>
+      <h2>Message me for your code</h2>
+      <p>I'll send you a personal QR code on WhatsApp or Discord. It's yours only, so please don't share it.</p>
+    </li>
+    <li>
+      <h2>Scan the code</h2>
+      <p>In WireGuard, tap <strong>+</strong>, then <strong>Scan from QR code</strong>. Give it any name and allow the VPN permission when asked.</p>
+    </li>
+    <li>
+      <h2>Switch it on, then open the game</h2>
+      <p>Turn the toggle on before launching. Turn it off when you're done playing so your normal apps use your regular connection.</p>
+    </li>
+  </ol>
+
+  <div class="warn">
+    <strong>Heads up:</strong> some games flag VPN connections. Use it at your own risk, and if the game warns you about VPNs, stop and tell me.
+  </div>
+
+  <footer>Not connecting? Turn the toggle off and on again, then message me.</footer>
+</main>
+</body>
+</html>
